@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <title>Crystal Collector</title>
+</head>
+<body>
+
+    <div class = "jumbotron "style="
+    padding-top: 0px;
+">
+        <h1>Mushroom Collector</h1> 
+    <p>To play the game, press any mushroom at the bottom of the screen. Press each mushroom until you match the score generated below. If <strong>your total score</strong> is greater than the <strong>number to match</strong>, you lose.</p>
+
+
+    <h2>Number to match: <span id="scoreToMatch"></span></h2>
+
+    <h2>Your total score: <span id="totalScore"></span></h2>
+
+    <h4>Wins: <span id="wins"></span></h4>
+
+    <h4>Losses: <span id="losses"></span></h4>
+</div>
+    <div class ="images">
+        <img src="assets/images/panus_fasciatus_burned.png" class="boo" max-width="190" height="190">
+        <img src="assets/images/nam_mutinus_caninus_burned.png" class="brainy" width="190" height="190">
+        <img src="assets/images/bubble_mushroom_burned.png" class="eggy" width="190" height="190">
+        <img src="assets/images/hydnellum_peckii_burned.png" class="topHat" width="190" height="190">
+    </div>
+
+
+    <script src="assets/javascript/game.js"></script>
+    
+</body>
+</html>
