@@ -93,30 +93,45 @@ $(document).on("click", ".crystal", function () {
 
 
     var _graphicSign = $("#_sign");
+    var switchOp = 0;
 
     $("#_button1").on("click", function () {
-        $("#_directions").toggle(1000);
 
+        if(switchOp === 0) {
+            $("#_directions").toggle(1000);
+            $("#_sign").animate({ height: "600px" });
+            switchOp = 1; 
+            $("#_words").hide(); 
+        }
+        else {
+            $("#_words").toggle(1000);
+            $("#_sign").animate({ height: "450px" });
+            $("#_directions").hide();
+            switchOp = 0;
+            // resetBox();
+        }
+
+        
 
     });
-    $("#_button1").on("click", function () {
-        $("#_sign").animate({ height: "600px" });
 
 
-    });
-    $("#_button1").on("click", function () {
-        $("#_words").toggle(1000);
+    // $("#_button1").on("click", function () {
+        // $("#_sign").animate({ height: "600px" });
 
-        resetBox();
-    });
+
+    // });
+    //$("#_button1").on("click", function () {
+        
+    //});
 
 //});
 
-var resetBox = function () {
-    $("#_button1").on("click", function () {
-        $("#_sign").animate({ height: "450px" });
-    });
-}
+// var resetBox = function () {
+//     $("#_button1").on("click", function () {
+//         $("#_sign").animate({ height: "450px" });
+//     });
+// }
 
 });
 
