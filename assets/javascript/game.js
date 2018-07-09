@@ -1,4 +1,3 @@
-
 var random_result;
 var playerTotal = 0;
 var lost = 0;
