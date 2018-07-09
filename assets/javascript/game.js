@@ -1,3 +1,5 @@
+$(document).ready(function () {
+
 var random_result;
 var playerTotal = 0;
 var lost = 0;
@@ -88,7 +90,7 @@ $(document).on("click", ".crystal", function () {
 
 });
 
-$(document).ready(function () {
+
 
     var _graphicSign = $("#_sign");
 
@@ -108,7 +110,7 @@ $(document).ready(function () {
         resetBox();
     });
 
-});
+//});
 
 var resetBox = function () {
     $("#_button1").on("click", function () {
@@ -116,5 +118,6 @@ var resetBox = function () {
     });
 }
 
+});
 
 
