@@ -1,108 +1,121 @@
-    $(document).ready(function() {
-    // generates random number to guess
-    var Random = Math.floor(Math.random() * 102+19)
 
-    // player will be shown a random number on the page
-    $('#scoreToMatch').text(Random);
-
-
-    // generate random number for each crazy bone
-    var cBone1 = Math.floor(Math.random() * 12 + 1)
-    var cBone2 = Math.floor(Math.random() * 12 + 1)
-    var cBone3 = Math.floor(Math.random() * 12 + 1)
-    var cBone4 = Math.floor(Math.random() * 12 + 1)
+var random_result;
+var playerTotal = 0;
+var lost = 0;
+var win = 0;
 
 
-    // set stats
-    var playerTotal = 0;
-    var wins = 0;
-    var losses = 0;
+
+// function to create game
+var resetAndStart = function () {
+
+    // empying crystal
+    $(".crystals").empty();
+
+    // generating new number
+    random_result = Math.floor(Math.random() * 69 ) + 30;
+
+    // adding to DOM
+    $("#result").html("Number to Match: " + random_result);
+
+    // looping 4 times
+    for(var i = 0; i < 4; i++) {
+
+        // creating a random number each time
+        var random = Math.floor(Math.random() * 11) + 1;
+        
+        // creating div for random number
+        var crystal = $("<div>");
+
+            // giving div attributes
+            crystal.attr({
+                "class": "crystal",
+                "data-random": random
+            });
+
+            // adding to DOM
+            //crystal.html(random);
+
+        // crystal where we are sending everything back
+        $(".crystals").append(crystal);
+    }
+
+    $("#totalScore").html("Total score: " + playerTotal);
     
 
-$('#wins').text(wins);
-$('#losses').text(losses);
-
-
-// reset game
-function resetGame(){
-
-    Random = Math.floor(Math.random() * 102+19);
-    $("#scoreToMatch").text(Random);
-    cBone1 = Math.floor(Math.random() * 12 + 1);
-    cBone2 = Math.floor(Math.random() * 12 + 1);
-    cBone3 = Math.floor(Math.random() * 12 + 1);
-    cBone4 = Math.floor(Math.random() * 12 + 1);
-    playerTotal = 0;
-    $("#totalScore").text(playerTotal);
 }
 
-
-// display wins
-function winner() {
-alert("I can't believe it");
-    wins++;
-    $("#wins").text(wins);
-    resetGame();
-}
+resetAndStart();
 
 
-// display losses
-function loser() {
-alert("Nah");
-    losses++;
-    $("#losses").text(losses);
-    resetGame()
-}
+// event delegation: 
+// when page loads it replaces div with new elements and starts listening to the DOM and not the old div
+$(document).on("click", ".crystal", function() {
 
-// clicking crazy bones
-    $(".boo").on("click", function(){
-        playerTotal = playerTotal + cBone1;
-        $("#totalScore").text(playerTotal);
-            // win & loose condition
-            if (playerTotal === Random) {
-                winner();
-            }
-            else if (playerTotal > Random) {
-                loser();
-            }
-    })
+    var num  = parseInt($(this).attr("data-random"));
 
-    $(".brainy").on("click", function(){
-        playerTotal = playerTotal + cBone2;
-        $("#totalScore").text(playerTotal);
-         // win & loose condition
-         if (playerTotal == Random) {
-            winner();
-        }
-        else if (playerTotal > Random) {
-            loser();
-        }
-    })
+    playerTotal += num;
 
-    $(".eggy").on("click", function(){
-        playerTotal = playerTotal + cBone3;
-        $("#totalScore").text(playerTotal);
-         // win & loose condition
-         if (playerTotal == Random) {
-            winner();
-        }
-        else if (playerTotal > Random) {
-            loser();
-        }
-    })
+    $("#totalScore").html("Total score: " + playerTotal);
+    document.getElementById("footStep").play();
 
-    $(".topHat").on("click", function(){
-        playerTotal = playerTotal + cBone4;
-        $("#totalScore").text(playerTotal);
-         // win & loose condition
-         if (playerTotal == Random) {
-            winner();
-        }
-        else if (playerTotal > Random) {
-            loser();
-        }
-    });  
+    console.log(playerTotal);
+    
+    
+    if(playerTotal > random_result) {
+        
+        lost++;
+
+        $("#lost").html("Losses: " + lost);
+
+        playerTotal = 0;
+
+        document.getElementById("scream").play();
+
+        resetAndStart();
+    }
+    else if(playerTotal === random_result){
+        
+        win++;
+
+        $("#win").html("Wins: " + win);
+
+        playerTotal = 0;
+
+        document.getElementById("growl").play();
+
+        resetAndStart();
+    }
+
 });
+
+$(document).ready(function(){
+
+    var _graphicSign = $("#_sign");
+
+    $("#_button1").on("click",function(){
+        $("#_directions").toggle(1000);
+        
+        
+    });
+    $("#_button1").on("click", function() {
+        $("#_sign").animate({ height: "600px" });
+
+      
+    });
+    $("#_button1").on("click",function(){
+        $("#_words").toggle(1000);   
+
+        resetBox();
+    });
+       
+});
+
+var resetBox = function() {
+    $("#_button1").on("click", function() {
+        $("#_sign").animate({ height: "450px" });
+});
+}
 
 
 
