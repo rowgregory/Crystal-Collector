@@ -1,6 +1,6 @@
 # Dinosaur Collector
 
-This homework assignment used jQuery to create a black-jack-like game.
+This game was created using jQuery. The object of the game is to click the dinosaurs and match the number generated on the screen.
 
 Don't collect too many dinosaurs or you lose!
 
