@@ -13,35 +13,35 @@ var resetAndStart = function () {
     $(".crystals").empty();
 
     // generating new number
-    random_result = Math.floor(Math.random() * 69 ) + 30;
+    random_result = Math.floor(Math.random() * 69) + 30;
 
     // adding to DOM
     $("#result").html("Number to Match: " + random_result);
 
     // looping 4 times
-    for(var i = 0; i < 4; i++) {
+    for (var i = 0; i < 4; i++) {
 
         // creating a random number each time
         var random = Math.floor(Math.random() * 11) + 1;
-        
+
         // creating div for random number
         var crystal = $("<div>");
 
-            // giving div attributes
-            crystal.attr({
-                "class": "crystal",
-                "data-random": random
-            });
+        // giving div attributes
+        crystal.attr({
+            "class": "crystal",
+            "data-random": random
+        });
 
-            // adding to DOM
-            //crystal.html(random);
+        // adding to DOM
+        //crystal.html(random);
 
         // crystal where we are sending everything back
         $(".crystals").append(crystal);
     }
 
     $("#totalScore").html("Total score: " + playerTotal);
-    
+
 
 }
 
@@ -50,9 +50,9 @@ resetAndStart();
 
 // event delegation: 
 // when page loads it replaces div with new elements and starts listening to the DOM and not the old div
-$(document).on("click", ".crystal", function() {
+$(document).on("click", ".crystal", function () {
 
-    var num  = parseInt($(this).attr("data-random"));
+    var num = parseInt($(this).attr("data-random"));
 
     playerTotal += num;
 
@@ -60,10 +60,10 @@ $(document).on("click", ".crystal", function() {
     document.getElementById("footStep").play();
 
     console.log(playerTotal);
-    
-    
-    if(playerTotal > random_result) {
-        
+
+
+    if (playerTotal > random_result) {
+
         lost++;
 
         $("#lost").html("Losses: " + lost);
@@ -74,8 +74,8 @@ $(document).on("click", ".crystal", function() {
 
         resetAndStart();
     }
-    else if(playerTotal === random_result){
-        
+    else if (playerTotal === random_result) {
+
         win++;
 
         $("#win").html("Wins: " + win);
@@ -89,32 +89,32 @@ $(document).on("click", ".crystal", function() {
 
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     var _graphicSign = $("#_sign");
 
-    $("#_button1").on("click",function(){
+    $("#_button1").on("click", function () {
         $("#_directions").toggle(1000);
-        
-        
+
+
     });
-    $("#_button1").on("click", function() {
+    $("#_button1").on("click", function () {
         $("#_sign").animate({ height: "600px" });
 
-      
+
     });
-    $("#_button1").on("click",function(){
-        $("#_words").toggle(1000);   
+    $("#_button1").on("click", function () {
+        $("#_words").toggle(1000);
 
         resetBox();
     });
-       
+
 });
 
-var resetBox = function() {
-    $("#_button1").on("click", function() {
+var resetBox = function () {
+    $("#_button1").on("click", function () {
         $("#_sign").animate({ height: "450px" });
-});
+    });
 }
 
 

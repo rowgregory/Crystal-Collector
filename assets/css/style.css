@@ -3,55 +3,41 @@ body {
     background-repeat:no-repeat;
     background-attachment: fixed;
     background-position: center; 
-    background-size:cover;
-    
+    background-size:cover; 
 }
 
 .crystals {
-    display:flex;
-    
-    
-    /*justify-content: space-around;*/
-    
-    
+    display:flex;  
 }
 
 .crystal {
     margin-top: -400px;
     justify-content: space-around;
-   
     height: 95vh;
     width: 40vw;
 }
 
-
 img {
     margin: -30px auto;
     width: 100%;
-    height:115%;
-    
-    
+    height:115%;   
 }
+
 #container{
-    
     margin-right:auto;
     margin-left: auto;
     width:40%;
     z-index: -1;
-    
     height: 400px;
-    
 }
 
-p {   
-    
+p {    
     text-align: center;
     font-family: 'Shojumaru', cursive;
     text-shadow: 4px 4px 4px #aaa;
     font-size:20px;
     padding-left:50px;
     padding-right:50px;
-    
 }
 
 div #result {
@@ -64,19 +50,16 @@ button {
     font-size:14px;
     margin-left:39%;
     margin-right:60%;
-    border-radius:10%;
-    
+    border-radius:10%; 
 }
 
 #_directions {
     display: none;
     margin-top:-370px;
     z-index:3;
-    float: both;
-    
+    float: both; 
 }
 
 #_words {
-    display: visible;
-    
+    display: visible;  
 }
