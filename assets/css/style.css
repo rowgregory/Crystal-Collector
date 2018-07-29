@@ -1,9 +1,14 @@
 body {
     background: url(../images/dino3D2.jpg);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
+    background-size:cover;
     background-attachment: fixed;
-    background-position: center; 
-    background-size:cover; 
+    background-position: center;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .crystals {
@@ -11,55 +16,56 @@ body {
 }
 
 .crystal {
-    margin-top: -400px;
+    /* margin-top: -400px; */
     justify-content: space-around;
-    height: 95vh;
+    height: 218vw;
     width: 40vw;
+    border:none;
+    background: none;
 }
 
-img {
-    margin: -30px auto;
-    width: 100%;
-    height:115%;   
+div img {
+    
+    margin-top:-2vw;
+    width: 100vw;
+    height:60vw;   
 }
 
 #container{
     margin-right:auto;
     margin-left: auto;
-    width:40%;
-    z-index: -1;
-    height: 400px;
+   
+    /* height: 400px; */
 }
 
 p {    
     text-align: center;
     font-family: 'Shojumaru', cursive;
     text-shadow: 4px 4px 4px #aaa;
-    font-size:20px;
+    font-size:12px;
     padding-left:50px;
     padding-right:50px;
 }
 
-div #result {
-    margin-top: -330px;
-}
-
-button {
-    text-align: center;
-    font-family: 'Shojumaru', cursive;
-    font-size:14px;
-    margin-left:39%;
-    margin-right:60%;
-    border-radius:10%; 
+#_button1 {
+    position:relative;
+    background: rgba(76, 92, 109, 0.5);
+    border:none;
+    padding:2vw;
+    border-radius:15px;
+    color:black;
+    margin-left:40vw;
+    
 }
 
 #_directions {
     display: none;
-    margin-top:-370px;
+    margin-top:-60vw;
     z-index:3;
     float: both; 
 }
 
 #_words {
+    margin-top:-50vw;
     display: visible;  
 }

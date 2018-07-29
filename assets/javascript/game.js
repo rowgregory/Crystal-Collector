@@ -26,7 +26,7 @@ var resetAndStart = function () {
         var random = Math.floor(Math.random() * 11) + 1;
 
         // creating div for random number
-        var crystal = $("<div>");
+        var crystal = $("<button>");
 
         // giving div attributes
         crystal.attr({
@@ -92,21 +92,21 @@ $(document).on("click", ".crystal", function () {
 
 
 
-    var _graphicSign = $("#_sign");
+    
     var switchOp = 0;
 
     $("#_button1").on("click", function () {
 
         if(switchOp === 0) {
             $("#_directions").toggle(1000);
-            $("#_sign").animate({ height: "600px" });
+            $("#_sign").animate({ height: "80vw" });
             switchOp = 1; 
-            $("#_words").hide(); 
+            $("#_words").slideToggle(); 
         }
         else {
             $("#_words").toggle(1000);
-            $("#_sign").animate({ height: "450px" });
-            $("#_directions").hide();
+            $("#_sign").animate({ height: "60vw" });
+            $("#_directions").slideToggle();
             switchOp = 0;
             // resetBox();
         }
