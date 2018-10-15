@@ -9,23 +9,46 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Shojumaru" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
-    <button id="_button1">Directions</button>
-    <div id="container">
-        <img id="_sign" src="assets/images/jungle_sign_burned.png">
-        <div id="_words">
-            <p id="result">Number to Match: </p>
-            <p id="totalScore">Total score: </p>
-            <p id="win">Wins: </p>
-            <p id="lost">Losses: </p>
-        </div>
-    </div>
-
-        <p id="_directions">To play the game, press any dinosaur on the screen. Press each dinosaur until you match the generated score. If your
-            total score is greater than the number to match, you lose.</p>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col text-center dinoC">
+                    <h1>Dinosaur Collector</h1>
+                </div>
+            </div>
         
+            <div class="row">
+                <div class="col-sm-4 col-md-8">
+                    <p>
+                        <a class="btn btn-success btn-block" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Directions</a> 
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                            Press any dinosaur on the screen. Press each dinosaur until you match the generated score. If your
+                            total score is greater than the number to match, you lose.
+                    </div>
+                    </div>
+                </div>
+                <div class=" col-sm-8 col-md-4 text-center">
+                    <div id="_words">
+                        <p id="result">Number to Match: </p>
+                        <p id="totalScore">Total score: </p>
+                        <p id="win">Wins: </p>
+                        <p id="lost">Losses: </p>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </div> 
+        
+
+        
+       
 
     
 
@@ -35,6 +58,11 @@
     <audio id="growl" src="assets/audio/carnotaurus_sound.wav"></audio>
     <audio id="footStep" src="assets/audio/dino_footstep.mp3"></audio>
 
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>
 
 </body>
