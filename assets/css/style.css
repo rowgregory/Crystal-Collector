@@ -19,11 +19,9 @@ body {
 #totalScore, #win, #lost {
     margin-top: -14px;
 }
-.jumbotron{
-    
-}
+
  .crystals {
-      
+      display: flex;
 }
 
 .crystal {
