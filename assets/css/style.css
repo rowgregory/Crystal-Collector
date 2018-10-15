@@ -86,9 +86,9 @@ p {
     margin-top:-50vw;
     display: visible;  
 }
-
+*/
 input[type="button"]:focus {
     outline:none;
     border:none;
     outline: 0 !important;
-} */
+} 
