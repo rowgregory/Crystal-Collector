@@ -16,14 +16,15 @@ body {
     margin-top:-40px;
 }
 .jumbotron{
-    height:160px;
+    height:150px;
+    
 }
 
 #totalScore, #win, #lost {
     margin-top: -14px;
 }
 
- .crystals {
+.crystals {
       display: flex;
 }
 
@@ -38,8 +39,13 @@ body {
 
 @media only screen and (max-width: 375px) {
     
-        .dinoC, #_words {
-            margin-top:40px;
+    .dinoC {
+        margin-top:-30px;
+    }    
+    
+    #_words {
+            margin-top:-5px;
+            color:green;
         }
     
 }
