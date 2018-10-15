@@ -51,7 +51,7 @@ resetAndStart();
 
 // event delegation: 
 // when page loads it replaces div with new elements and starts listening to the DOM and not the old div
-$(document).on("touchstart click", ".crystal", function () {
+$(document).on("click touchstart", ".crystal", function () {
 
     var num = parseInt($(this).attr("data-random"));
 
