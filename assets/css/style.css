@@ -24,15 +24,18 @@ body {
 }
 
  .crystals {
-      display: flex;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    border:none;
+    background: none;
 }
 
 .crystal {
-    justify-content: space-around;
-    height: 100vw;
-    width: 40vw;
-    border:none;
-    background: none;
+    width:40vw
     /* position: relative; */
 }
 
