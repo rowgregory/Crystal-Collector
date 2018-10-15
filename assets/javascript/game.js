@@ -5,6 +5,9 @@ var playerTotal = 0;
 var lost = 0;
 var win = 0;
 
+$('.dinoC').on('click', function() {
+    $('#_words').toggle();
+})
 
 
 // function to create game
