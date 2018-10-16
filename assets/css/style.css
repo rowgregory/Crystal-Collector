@@ -17,6 +17,9 @@ body {
     margin-top:-40px;  
 }
 
+
+
+
 #_words{
     color:white;
 }
@@ -89,6 +92,7 @@ body {
     outline:none !important;
     border:none !important;
     outline: 0 !important;
+    background:none !important;
 }
 
 @media only screen and (max-width: 375px) {

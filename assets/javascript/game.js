@@ -53,6 +53,14 @@ $(document).ready(function () {
 
     resetAndStart();
 
+    $(document).ready(function(){
+        $('.fixed-action-btn').floatingActionButton();
+      });
+
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
     
 
     // event delegation: 
