@@ -47,31 +47,38 @@ body {
     top:0;
 }
 #animate1{
-    height:90vh;
+    height:95vh;
     position:absolute;
-    top:10%;
-    left:25%;
+    top:5%;
+    left:20%;
     
 }
 #animate2{
     height:93vh;
     position:absolute;
     top:7%;
-    left:50%;
+    left:40%;
     
 }
 #animate3{
-    height:90vh;
+    height:95vh;
     position:absolute;
     top:0;
-    left:75%;
-    top:10%;
+    left:60%;
+    top:5%;
+}
+#animate4{
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:80%;
+    top:0%;
 }
 
 .crystal {
     justify-content: space-around;
     height: 100%;
-    width: 25%;
+    width: 20%;
     border:0 !important;
     background: transparent;
     box-shadow: none;

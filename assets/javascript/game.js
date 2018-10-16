@@ -26,7 +26,7 @@ $(document).ready(function () {
         $("#result").html("Number to Match: " + random_result);
 
         // looping 4 times
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 5; i++) {
 
             // creating a random number each time
             var random = Math.floor(Math.random() * 11) + 1;
