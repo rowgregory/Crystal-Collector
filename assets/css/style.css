@@ -9,6 +9,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+    z-index:-2;
     
 }
 
@@ -25,10 +26,9 @@ body {
 }
 
 .jumbotron{
-    /*  height:150px; */
     background:rgba(0, 0, 0, 0.7) !important;
     border-radius: 0 0 25px 25px !important;
-    
+    z-index:-1;
 }
 
 #totalScore, #win, #lost {
@@ -36,16 +36,52 @@ body {
 }
 
 .crystals {
-      display: flex;
+    border:none !important;
+    height: auto;
+    width: 100%;
+    
+}
+#animate0{
+    height:100vh;
+    position:absolute;
+    top:0;
+}
+#animate1{
+    height:100vh;
+    position:absolute;
+    top:10%;
+    left:25%;
+    
+}
+#animate2{
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:50%;
+    z-index:-3;
+}
+#animate3{
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:75%;
+    top:10%;
 }
 
 .crystal {
     justify-content: space-around;
-    height: 80vw;
-    width: 40vw;
-    border:none;
-    background: none;
-    /* position: relative; */
+    height: 100%;
+    width: 25%;
+    border:0 !important;
+    background: transparent;
+    box-shadow: none;
+    
+}
+
+.crystal:focus{
+    outline:none !important;
+    border:none !important;
+    outline: 0 !important;
 }
 
 @media only screen and (max-width: 375px) {
@@ -60,52 +96,3 @@ body {
         }
     
 }
-/*
-div img {
-    margin-top:-2vw;
-    width: 100vw;
-    height:60vw;   
-}
-
-#container{
-    margin-right:auto;
-    margin-left: auto;
-}
-
-p {    
-    text-align: center;
-    font-family: 'Shojumaru', cursive;
-    text-shadow: 4px 4px 4px #aaa;
-    font-size:3vw;
-    padding-left:50px;
-    padding-right:50px;
-}
-
-#_button1 {
-    position:relative;
-    background: rgba(76, 92, 109, 0.5);
-    border:none;
-    padding:2vw;
-    border-radius:15px;
-    color:black;
-    margin-left:40vw;
-    
-}
-
-#_directions {
-    display: none;
-    margin-top:-60vw;
-    z-index:3;
-    float: both; 
-}
-
-#_words {
-    margin-top:-50vw;
-    display: visible;  
-}
-
-input[type="button"]:focus {
-    outline:none;
-    border:none;
-    outline: 0 !important;
-} */
