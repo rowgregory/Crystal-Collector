@@ -95,6 +95,11 @@ body {
     background:none !important;
 }
 
+#niceOne{
+    color:orange;
+    font-size: 40px;
+}
+
 @media only screen and (max-width: 375px) {
     
     .dinoC {

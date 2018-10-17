@@ -9,12 +9,16 @@ $(document).ready(function () {
         $('#_words').toggle();
     })
 
-    
-    
-    
+
+
+
 
     // function to create game
     var resetAndStart = function () {
+
+        
+        
+        
 
         // empying crystal
         $(".crystals").empty();
@@ -38,7 +42,7 @@ $(document).ready(function () {
             crystal.attr({
                 "class": "crystal",
                 "data-random": random,
-                "data-index": i, 'id' : 'animate' + i
+                "data-index": i, 'id': 'animate' + i
             });
 
             // adding to DOM
@@ -53,15 +57,9 @@ $(document).ready(function () {
 
     resetAndStart();
 
-    $(document).ready(function(){
-        $('.fixed-action-btn').floatingActionButton();
-      });
 
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
 
-    
+
 
     // event delegation: 
     // when page loads it replaces div with new elements and starts listening to the DOM and not the old div
@@ -75,7 +73,7 @@ $(document).ready(function () {
         document.getElementById("footStep").play();
 
         console.log(playerTotal);
-
+        
 
         if (playerTotal > random_result) {
 
@@ -88,9 +86,16 @@ $(document).ready(function () {
             document.getElementById("scream").play();
 
             resetAndStart();
+
+            if(lost === 2) {
+             
+                $('#myModal').modal({backdrop: 'static', keyboard: false})  
+            }
         }
         else if (playerTotal === random_result) {
 
+            document.getElementById('niceOne').innerHTML = "NICE ONE!";
+            $('#niceOne').show();
             win++;
 
             $("#win").html("Wins: " + win);
@@ -99,10 +104,29 @@ $(document).ready(function () {
 
             document.getElementById("growl").play();
 
+            
+            
+            setTimeout(function() {
+                $('#niceOne').hide();
+                
+            }, 4000);
+
             resetAndStart();
-        }
-    });
-});
+
+            
+        } 
+        
+
+        
+    })
+
+    
+        
+    
+
+    
+})
+
 
 
         // previous animated direction screen before bootstrap was added
