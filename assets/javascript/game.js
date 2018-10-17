@@ -91,6 +91,28 @@ $(document).ready(function () {
              
                 $('#myModal').modal({backdrop: 'static', keyboard: false})  
             }
+
+            if (lost === 4) {
+
+                document.getElementById('eatenAlive').innerHTML = "You're getting eaten alive!!";
+                $('#eatenAlive').show();
+            }
+
+            setTimeout(function() {
+                $('#eatenAlive').hide();
+                
+            }, 4000);
+
+            if (lost === 6) {
+
+                document.getElementById('turnBackNow').innerHTML = "TURN BACK NOW!!";
+                $('#turnBackNow').show();
+            }
+
+            setTimeout(function() {
+                $('#turnBackNow').hide();
+                
+            }, 4000);
         }
         else if (playerTotal === random_result) {
 
