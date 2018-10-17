@@ -92,7 +92,7 @@ $(document).ready(function () {
                 $('#myModal').modal({backdrop: 'static', keyboard: false})  
             }
 
-            if (lost === 4) {
+            if (lost === 3) {
 
                 document.getElementById('eatenAlive').innerHTML = "You're getting eaten alive!!";
                 $('#eatenAlive').show();
@@ -103,7 +103,7 @@ $(document).ready(function () {
                 
             }, 4000);
 
-            if (lost === 6) {
+            if (lost === 4) {
 
                 document.getElementById('turnBackNow').innerHTML = "TURN BACK NOW!!";
                 $('#turnBackNow').show();
