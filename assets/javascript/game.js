@@ -94,7 +94,7 @@ $(document).ready(function () {
         }
         else if (playerTotal === random_result) {
 
-            document.getElementById('niceOne').innerHTML = "NICE ONE!";
+            document.getElementById('niceOne').innerHTML = "Impressive!";
             $('#niceOne').show();
             win++;
 
